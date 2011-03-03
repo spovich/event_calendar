@@ -28,7 +28,7 @@ module <%= helper_class_name %>
       html
       <%- else -%>
       event = args[:event]
-      %(<a href="/events/#{event.id}" title="#{h(event.name)}">#{h(event.name)}</a>)
+      %(<a href="#{polymorphic_path(event)}" title="#{h(event.name)}">#{h(event.name)}</a>)
       <%- end -%>
     end
   end
